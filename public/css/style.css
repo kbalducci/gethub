@@ -1,4 +1,119 @@
-.foo .bar {
-  width: none; }
+.banner {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: 100px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid; }
+
+.nav_cat {
+  margin-left: 12%; }
+
+.nav_left {
+  width: 30%;
+  display: inline;
+  padding: 4px 8px;
+  font-size: 13px;
+  font-weight: 20px;
+  color: #333333; }
+
+.nav_left li {
+  display: inline;
+  list-style: none;
+  padding: 4px 8px;
+  font-size: 13px;
+  font-weight: 20px;
+  color: #333333; }
+
+.nav_right {
+  width: 30%;
+  height: 23px;
+  display: inline;
+  margin: 15px;
+  padding: 4px 8px;
+  font-size: 13px;
+  font-weight: 20px;
+  color: #333333;
+  float: right; }
+
+.nav_right li {
+  float: right;
+  margin: 15px;
+  padding: 4px 8px;
+  font-size: 18px;
+  display: inline;
+  list-style: none;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px; }
+
+.form-control {
+  position: relative;
+  width: 370px;
+  height: 28px;
+  float: left;
+  font-size: 13px;
+  color: #333333; }
+
+.mega-octicon {
+  float: left;
+  width: 28px;
+  height: 28px;
+  font-size: 28px;
+  margin-right: 10px;
+  margin-left: 20px;
+  color: #333333; }
+
+.container {
+  margin-left: 12%;
+  margin-top: 20px;
+  width: 100%; }
+
+.lg_avatar {
+  height: 240px;
+  width: 240px; }
+
+.names {
+  width: 240px; }
+
+.avatar_info {
+  width: 240px; }
+
+.avatar_details {
+  width: 240px; }
+
+.avatar_name {
+  margin-top: 5px;
+  line-height: 1;
+  font-size: 30px;
+  margin-bottom: 15px;
+  width: 240px;
+  font-family: helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+
+.username {
+  font-size: 20px;
+  float: left;
+  display: inline-block;
+  width: 240px; }
+
+.envelope {
+  color: #cccccc;
+  width: 16px;
+  display: inline-block; }
+
+.clock {
+  color: #cccccc;
+  float: left;
+  width: 16px;
+  display: inline-block; }
+
+.email {
+  color: #000000;
+  float: left;
+  display: inline-block; }
+
+.joined {
+  display: inline-block; }
 
 /*# sourceMappingURL=style.css.map */

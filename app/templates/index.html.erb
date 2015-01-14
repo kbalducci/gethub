@@ -2,18 +2,71 @@
 <html>
 	<head>
 		<link href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css' rel='stylesheet'>
+		<link rel="stylesheet" href="../octicons/octicons.css">
+		<link rel="stylesheet" href="css/style.css">
+
 	</head>
 	<body>
+		<header>
+			<div class='banner clearfix'>
+			<div class ='nav_cat'>
+				<span class="mega-octicon octicon-mark-github"></span>
+				<input type="search" class="form-control" placeholder="Search GitHub">
+			</div>
+					<ul class="nav_left">
+						<li>Explore</li>
+						<li>Gist</li>
+						<li>Blog</li>
+						<li>Help</li>
+					</ul>
+					<ul class="nav_right">
+						<li><img class='https://avatars0.githubusercontent.com/u/9836872?v=3&s=40'/></li>
+						<li><span class="octicon octicon-plus"></span></li>
+						<li><span class="octicon octicon-inbox"></span></li>
+						<li><span class="octicon octicon-gear"></span></li>
+						<li><span class="octicon octicon-sign-out"></span></li>
+					</ul>
+			</div>
+		</header>
 
-		<h1>Hello <%= @name %></h1>
+			<div class="container">
+    		<div class="row">
+	        <div class="col-md-2">
+	        	<div class="avatar_info">
+	        		<img class="lg_avatar"src='<%= @profile_data["avatar_url"] %>' />
+							<!-- <h1 class='avatar_name'><%= @name %></h1> -->
+							<div class='names'>
+								<h1 class='avatar_name'>
+									<div class='full_name'>Kate Balducci</div>
+									<div class='username'>kbalducci</div>
+								</h1>
+							</div>
+							<hr />
+							<div class='avatar_details'>
+									<div class='envelope'><span class="octicon octicon-mail"></span></div>
+									<div class='address'><a class='email' href='mailto:kbalducci@hotmail.com'>kbalducci@hotmail.com </a></div><br />
+									<!-- <div class='email'>kbalducci@hotmail.com</div> -->
+									<div class='clock'><span class="octicon octicon-clock"></span></div>
+									<div class='joined'>Joined on Nov 18, 2014</div>
+							</div>
+							<div class='stats'>
+								<a class='followers' href="#">
+									<strong>0<
+	        </div>
 
-		<img src='<%= @profile_data["avatar_url"] %>' />
+        	<div class="col-md-10">
+        		<button type="button" class="btn btn-default">Edit Profile</button>
+            <ul>
+							<% @repos_data.each do |repo| %>
+				  		<li> <%= repo['name'] %> </li>
+							<% end %>
+						</ul>
+        	</div>
+    		</div>
+			</div>
 
-		<ul>
-			<% @repos_data.each do |repo| %>
-			  <li> <%= repo['name'] %> </li>
-			<% end %>
-		</ul>
+			<div class='footer'>
+			</div>
 
 	</body>
 </html>
