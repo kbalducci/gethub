@@ -75,7 +75,8 @@
   width: 240px; }
 
 .names {
-  width: 240px; }
+  width: 240px;
+  height: 54px; }
 
 .avatar_info {
   width: 240px; }
@@ -99,6 +100,7 @@
 
 .envelope {
   color: #cccccc;
+  float: left;
   width: 16px;
   display: inline-block; }
 
@@ -108,12 +110,54 @@
   width: 16px;
   display: inline-block; }
 
+.address {
+  color: #000000;
+  float: left;
+  display: inline-block;
+  width: 200px; }
+
 .email {
   color: #000000;
   float: left;
-  display: inline-block; }
+  display: inline-block;
+  width: 200px; }
 
 .joined {
   display: inline-block; }
+
+.avatar_stats {
+  width: 230px;
+  height: 75px;
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+.stat {
+  width: 70px;
+  height: 43px;
+  float: left;
+  color: #4183c4;
+  text-align: center;
+  box-sizing: border-box; }
+
+.count {
+  width: 70px;
+  height: 28px;
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box; }
+
+.descriptors {
+  width: 48px;
+  height: 13px;
+  font-size: 11px;
+  text-align: center;
+  box-sizing: border-box;
+  display: inline; }
 
 /*# sourceMappingURL=style.css.map */
