@@ -20,11 +20,11 @@
 						<li>Help</li>
 					</ul>
 					<ul class="nav_right">
-						<li><img class='https://avatars0.githubusercontent.com/u/9836872?v=3&s=40'/></li>
-						<li><span class="octicon octicon-plus"></span></li>
-						<li><span class="octicon octicon-inbox"></span></li>
-						<li><span class="octicon octicon-gear"></span></li>
 						<li><span class="octicon octicon-sign-out"></span></li>
+						<li><span class="octicon octicon-gear"></span></li>
+						<li><span class="octicon octicon-inbox"></span></li>
+						<li><span class="octicon octicon-plus"></span></li>
+						<li><img class="sm_avatar"src='<%= @profile_data["avatar_url"] %>' /></li>
 					</ul>
 			</div>
 		</header>
@@ -66,16 +66,52 @@
 							<hr />
 						</div>
 	        </div>
-
         	<div class="col-md-10">
-        		<button type="button" class="btn btn-default">Edit Profile</button>
-            <ul>
-							<% @repos_data.each do |repo| %>
-				  		<li> <%= repo['name'] %> </li>
-							<% end %>
-						</ul>
-        	</div>
+        		<div class="tabnav">
+        			<div class="edit-profile">
+	        			<div class="my-button">
+
+		        			<button type="button" class="btn btn-default"><span class="octicon octicon-pencil"></span>Edit Profile</button>
+		        		</div>
+		        	</div>
+	        		<ul class="nav nav-tabs">
+							  <li role="presentation" ><a href="#" class="inactive"><span class="octicon octicon-diff-added"></span>Contributions</a></li>
+							  <li role="presentation" class="active"><a href="#" class="selected"><span class="octicon octicon-repo"></span>Repositories</a></li>
+							  <li role="presentation"><a href="#" class="inactive"><span class="octicon octicon-rss"></span>Public activity</a></li>
+							</ul>
+						</div>
+						<div class="repo-page">
+							<div class="repo-tab">
+								<div class="repo-bar">
+									<form class="navbar-form navbar-left" role="search">
+									  <div class="form-group">
+									    <input type="text" class="my-form-control" placeholder="Find a repository...">
+									  </div>
+									  <button type="submit" class="navbar-btn btn-default">Search</button>
+									</form>
+									<div class="new-btn">
+										<button type="button" class="repo-btn btn-default btn-lg">
+  									<span class="repo-img octicon octicon-repo"></span> New
+										</button>
+									</div>
+									<ul class="repo-list">
+										<li>All</li>
+										<li>Public</li>
+										<li>Private</li>
+										<li>Sources</li>
+										<li>Forks</li>
+										<li>Mirrors</li>
+									</ul>
+								</div>
+			            <ul class="repo-items">
+										<% @repos_data.each do |repo| %>
+							  		<li class="repo-list-items"> <%= repo['name'] %> </li>
+										<% end %>
+									</ul>
+							</div>
+						</div>
     		</div>
+			</div>
 			</div>
 
 			<div class='footer'>
